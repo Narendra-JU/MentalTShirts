@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "133344420482",
+    "project_id": "mentalapp-5d3c3",
+    "storage_bucket": "mentalapp-5d3c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133344420482:android:8c81b5e9a1a7e4b4ae8a9b",
+        "android_client_info": {
+          "package_name": "com.example.mentalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133344420482-ed4av8rargfcu80p2l1rhl7mo9ao50rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-PyTxM3G_GWvIC0UvBlgy2-wh4E8hZ9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133344420482-ed4av8rargfcu80p2l1rhl7mo9ao50rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

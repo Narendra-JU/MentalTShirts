@@ -1,4 +1,4 @@
-package com.example.mentalapp.ui
+package com.example.mentalapp
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -16,14 +16,15 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.mentalapp.R
-import com.example.mentalapp.ui.MentalSplashScreen.Companion.KEY_SEQUENCE
+import com.example.mentalapp.MentalSplashScreen.Companion.KEY_SEQUENCE
 import com.example.mentalapp.ui.theme.MentalAppTheme
-import com.example.mentalapp.utility.firebase.util.iterator
 import com.example.mentalapp.utility.firebase.MetalRemoteConfig
 import com.example.mentalapp.utility.firebase.RemoteConfigConstants
+import com.example.mentalapp.utility.firebase.util.iterator
+import dagger.hilt.android.AndroidEntryPoint
 import org.json.JSONObject
 
+@AndroidEntryPoint
 class MentalSplashScreen : ComponentActivity() {
 
     private var isLoading= true

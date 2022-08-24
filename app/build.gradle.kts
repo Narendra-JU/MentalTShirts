@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-
+    namespace = "com.example.mentalapp"
     compileSdk = 33
     defaultConfig {
         applicationId = "com.example.mentalapp"
@@ -20,15 +20,43 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += mapOf(
+                    "room.schemaLocation" to "$projectDir/schemas",
+                    "room.incremental" to "true",
+                    "room.expandProjection" to "true"
+                )
+            }
+        }
     }
 
     buildTypes {
-        named("release") {
-            isMinifyEnabled = false
-            setProguardFiles(listOf(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"))
+        debug {
+            applicationIdSuffix = ".debug"
+
+            resValue("string", "app_name", "@string/app_name_debug")
+
+            buildConfigField("String", "API_BASE_URL", "\"BASE_API_URL_DEV\"")
+        }
+
+        release {
+            isMinifyEnabled = true
+            isShrinkResources = true
+
+            resValue("string", "app_name", "@string/app_name_release")
+
+            buildConfigField("String", "API_BASE_URL", "\"BASE_API_URL_PROD\"")
+
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -37,6 +65,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.2.0"

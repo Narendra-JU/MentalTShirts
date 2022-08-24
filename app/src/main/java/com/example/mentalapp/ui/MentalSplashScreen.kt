@@ -19,7 +19,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.mentalapp.R
 import com.example.mentalapp.ui.MentalSplashScreen.Companion.KEY_SEQUENCE
 import com.example.mentalapp.ui.theme.MentalAppTheme
-import com.example.mentalapp.util.iterator
+import com.example.mentalapp.utility.firebase.util.iterator
 import com.example.mentalapp.utility.firebase.MetalRemoteConfig
 import com.example.mentalapp.utility.firebase.RemoteConfigConstants
 import org.json.JSONObject

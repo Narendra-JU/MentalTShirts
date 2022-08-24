@@ -1,4 +1,4 @@
-package com.example.mentalapp.util
+package com.example.mentalapp.utility.firebase.util
 
 import org.json.JSONArray
 

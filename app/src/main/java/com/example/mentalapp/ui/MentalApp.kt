@@ -1,6 +1,7 @@
 package com.example.mentalapp.ui
 
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import com.example.mentalapp.ui.theme.MentalAppTheme
@@ -10,5 +11,11 @@ import com.example.mentalapp.ui.theme.MentalAppTheme
 fun MentalApp() {
     MentalAppTheme {
         val navController = rememberNavController()
+
+        Scaffold {innerPadding ->
+
+            
+        }
+
     }
 }
